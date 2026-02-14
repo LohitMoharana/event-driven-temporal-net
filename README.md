@@ -18,8 +18,6 @@ I structured the network as a **3-2-1 Hierarchical Funnel**. This layout is desi
 
 ---
 
-## 🖼️ Circuit Gallery
-
 ## 📊 Neural Response & Logic Analysis
 To verify the temporal summation of the network, I performed high-speed timing analysis using the XLA1 Logic Analyzer.
 
@@ -29,6 +27,10 @@ The waveform below demonstrates the "Integrate-and-Fire" mechanism. You can see 
 <img width="793" height="598" alt="Screenshot 2026-02-14 112625" src="https://github.com/user-attachments/assets/61bfed5e-3f58-4279-a437-dc69e8508d4a" />
 
 *Caption: Spike propagation through the hierarchy. Note the output firing only after the cumulative threshold is reached.*
+
+---
+
+## 🖼️ Circuit Gallery
 
 ### **Asynchronous Reset Timing**
 A close-up of the RC feedback loop shows a stable reset pulse of ~$1\mu s$. This ensures the "membrane potential" (counter value) returns to zero before the next input event, mimicking a biological refractory period.
