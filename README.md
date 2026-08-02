@@ -89,8 +89,3 @@ I used the **XLA1 Logic Analyzer** to verify that the reset pulses were fast eno
 * ✅ **Phase 1:** Multisim Logic Validation (Done)
 * 🛠️ **Phase 2:** Moving to the breadboard with a 4-LDR sensor array (Currently working on).
 * ⚡ **Phase 3:** Scaling the architecture onto a **Xilinx PYNQ-Z2 FPGA**.
-
----
-
-## 🎓 About Me
-I'm an Electronics and Communication Engineering student at **OUTR Bhubaneswar** (class of 2028), currently exploring the intersection of hardware architecture and neuromorphic computing.
