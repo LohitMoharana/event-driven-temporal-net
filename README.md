@@ -2,9 +2,9 @@
 > **Building a Brain: A Discrete Hardware Take on Spiking Neural Networks (SNN)**
 
 ## 🧠 Project Overview
-Most AI today is "always on," burning power even when nothing is happening. `event-driven-temporal-net` is my attempt to flip that script. Instead of using code, I’ve built a hardware prototype of a **Spiking Neural Network (SNN)** using classic TTL logic. 
+Most AI today is "always on," burning power even when nothing is happening. `event-driven-temporal-net` is my attempt to flip that script. Instead of using code, I've built a hardware prototype of a **Spiking Neural Network (SNN)** using classic TTL logic. 
 
-The goal was to create a system that only "thinks" when it receives a spike (a pulse). It’s an event-driven approach that prioritizes efficiency and mimics how biological neurons actually integrate information over time.
+The goal was to create a system that only "thinks" when it receives a spike (a pulse). It's an event-driven approach that prioritizes efficiency and mimics how biological neurons actually integrate information over time.
 
 ---
 
@@ -63,9 +63,9 @@ I didn't use a processor here. Every "neuron" is a hardwired circuit realizing t
 
 ## 🚀 Why This Matters
 * **Truly Event-Driven:** If there are no input spikes, the counters stay still. No wasted computation, no wasted power.
-* **Parallel by Default:** Every single neuron in this hierarchy works at the same time. There’s no CPU bottleneck.
+* **Parallel by Default:** Every single neuron in this hierarchy works at the same time. There's no CPU bottleneck.
 * **Stable at Speed:** I've validated this logic for pulse trains up to **10 kHz**, ensuring the temporal summation stays accurate even at high frequencies.
-* **Scale-Ready:** By using Hierarchical Blocks in Multisim, the design is modular and ready to be ported to an FPGA.
+* **Scale-Ready:** By using Hierarchical Blocks in Multisim, the design is modular and could be extended toward an FPGA in the future.
 
 ---
 
@@ -85,7 +85,10 @@ I used the **XLA1 Logic Analyzer** to verify that the reset pulses were fast eno
 
 ---
 
-## 🗺️ What's Next?
-* ✅ **Phase 1:** Multisim Logic Validation (Done)
-* 🛠️ **Phase 2:** Moving to the breadboard with a 4-LDR sensor array (Currently working on).
-* ⚡ **Phase 3:** Scaling the architecture onto a **Xilinx PYNQ-Z2 FPGA**.
+## 🗺️ Status & Future Work
+
+* ✅ **Phase 1 — Simulation & Logic Validation:** Complete. Full 3-2-1 hierarchy validated in Multisim up to 10kHz, with confirmed timing analysis on the reset/refractory mechanism.
+* ⏸️ **Phase 2 — Physical breadboard build:** Not currently in progress. Scoped as a future extension (4-LDR sensor array input) if I return to this project.
+* ⏸️ **Phase 3 — FPGA port (Xilinx PYNQ-Z2):** Future extension, dependent on Phase 2.
+
+This project is currently paused at the simulation stage. The circuit design, timing analysis, and dev log above represent a complete, validated proof-of-concept in software simulation — hardware realization is a possible future direction, not an active work-in-progress.
